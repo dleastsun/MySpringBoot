@@ -39,7 +39,6 @@ public class RedisConfig2 extends CachingConfigurerSupport{
                 StringBuilder sb = new StringBuilder();
                 sb.append(o.getClass().getName());
                 sb.append(method.getName());
-                System.out.println("QQQQ");
                 for (Object obj:objects){
                     sb.append(obj.toString());
                 }

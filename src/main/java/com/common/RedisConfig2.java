@@ -23,14 +23,13 @@ import redis.clients.jedis.JedisPoolConfig;
 import java.lang.reflect.Method;
 
 /**
- * Created by zhuzhengping on 2017/2/19.
+ * Created by zhuzhengping on 2017/2/19
  * redis配置
  */
 @Configuration
 @EnableCaching
 @PropertySource("classpath:config/redis.properties")
 public class RedisConfig2 extends CachingConfigurerSupport{
-
     @Bean
     @Override
     public KeyGenerator keyGenerator(){
@@ -40,6 +39,7 @@ public class RedisConfig2 extends CachingConfigurerSupport{
                 StringBuilder sb = new StringBuilder();
                 sb.append(o.getClass().getName());
                 sb.append(method.getName());
+                System.out.println("QQQQ");
                 for (Object obj:objects){
                     sb.append(obj.toString());
                 }
